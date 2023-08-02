@@ -1,11 +1,15 @@
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({ data }) => {
+const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
+  const handleClick = () => {
+    setShowIndex();
+  };
+
   return (
     <div className="accordion">
       {/* Accordion Header */}
-      <div className="accordion-header">
-        <span>
+      <div className="accordion-header" onClick={handleClick}>
+        <span className="accordion-title">
           {data.title} ({data.itemCards.length}){" "}
         </span>
 
@@ -14,7 +18,7 @@ const RestaurantCategory = ({ data }) => {
       <div>
         {/* Accordion Body */}
 
-        {<ItemList items={data.itemCards} />}
+        {showItems && <ItemList items={data.itemCards} />}
       </div>
     </div>
   );

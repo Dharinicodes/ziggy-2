@@ -1,5 +1,6 @@
 import React from "react";
 import User from "./User";
+import UserContext from "../utils/UserContext";
 
 class About extends React.Component {
   constructor(props) {
@@ -17,6 +18,11 @@ class About extends React.Component {
     return (
       <div>
         <h1>About Us</h1>
+        <div>
+          <UserContext.Consumer>
+            {({ loggedInUser }) => <h2>Logged In User: {loggedInUser}</h2>}
+          </UserContext.Consumer>
+        </div>
         <h2>
           We are a startup trying to grow as high as swiggy and even beyond them
         </h2>

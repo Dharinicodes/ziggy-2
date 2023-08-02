@@ -18,11 +18,20 @@ const ItemList = ({ items }) => {
             </div>
             <p className="dish-description">{item.card.info.description}</p>
           </div>
-          <div>
-            <img src={CDN_URL + item.card.info.imageId} className="dish-pic" />{" "}
+          <div className="dish-container">
+            <img
+              className="dish-pic"
+              alt=""
+              src={CDN_URL + item.card.info.imageId}
+            />
+            <div>
+              {" "}
+              <button className="add-btn"> Add + </button>{" "}
+            </div>
           </div>
         </div>
       ))}
+      
     </div>
   );
 };

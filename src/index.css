@@ -34,7 +34,7 @@ code {
 
 .nav-items > ul > li {
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
 }
 
 .res-container {
@@ -45,13 +45,28 @@ code {
 .res-card {
   margin: 5px;
   width: 200px;
-  padding: 10px;
-  background-color: bisque;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fff7ed;
 }
 
 .res-card:hover {
   cursor: pointer;
-  border: 1px solid black;
+  background-color: #e5e5e5;
+}
+
+.shimmer-card {
+  margin: 5px;
+  width: 200px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: #fff7ed;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .res-logo {
@@ -72,22 +87,18 @@ code {
   margin-left: 20px;
 }
 
-.shimmer-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.shimmer-card {
-  margin: 5px;
-  width: 200px;
-  height: 400px;
-  padding: 10px;
-  background-color: bisque;
+.user-name {
+  margin-left: 0.8rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
 }
 
 .login-btn {
-  padding: 5px;
-  margin: 5px;
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #60a5fa;
 }
 
 .res-links,
@@ -143,6 +154,11 @@ code {
 .accordion-header {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font: bold;
 }
 
 .accordion-body {
@@ -163,6 +179,16 @@ code {
 }
 
 .dish-pic {
-  width: 5rem;
+  width: 7rem;
   padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.add-btn {
+  border-radius: 0.2rem;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-style: none;
+  display: absolute;
 }
