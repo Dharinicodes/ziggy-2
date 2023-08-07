@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
@@ -10,6 +11,12 @@ const Header = () => {
   const { loggedInUser } = useContext(UserContext);
 
   const onlineStatus = useOnlineStatus();
+
+  // Subscribing to store using Selector
+  // (store) => store.cart.items - means what portion of the store I want to subscribe inorder to get access to it
+
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
 
   return (
     <div className="header">
@@ -32,7 +39,9 @@ const Header = () => {
           <li>
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>🛒</li>
+          <li>
+            <Link to="/cart"> {cartItems.length} 🛒 </Link>
+          </li>
           <li>
             {" "}
             <button
@@ -46,7 +55,7 @@ const Header = () => {
               {btnNameReact}
             </button>{" "}
           </li>
-          <li>{loggedInUser}</li>
+          <li>CURRENT USER: {loggedInUser}</li>
         </ul>
       </div>
     </div>

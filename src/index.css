@@ -1,16 +1,6 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  font-family: "Poppins", sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 
 .header {
   display: flex;
@@ -191,4 +181,18 @@ code {
   cursor: pointer;
   border-style: none;
   display: absolute;
+}
+
+.cart {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.cart > button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  color: white;
+  background-color: black;
 }
