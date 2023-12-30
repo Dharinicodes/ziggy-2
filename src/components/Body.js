@@ -95,16 +95,14 @@ const Body = () => {
             key={restaurant?.info.id}
             to={"/restaurants/" + restaurant?.info.id}
           >
-            {restaurant?.info.promoted ? (
-              <RestaurantCardPromoted resData={restaurant?.info} /> // FIXME: Promoted label is not getting getting displayed in the card
+            {restaurant?.info.avgRating > 4.5 ? (
+              <RestaurantCardPromoted resData={restaurant?.info} /> // restaurant?.info.promoted is currently not there in their API. if there's promoted in API, use the old method
             ) : (
               <RestaurantCard resData={restaurant?.info} />
-            )}{" "}
+            )}
           </Link>
         ))}
       </div>
-      {/* console.log(
-      <RestaurantCardPromoted />) */}
     </div>
   );
 };

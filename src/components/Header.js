@@ -1,5 +1,5 @@
-import { LOGO_URL } from "../utils/constants";
 import { useContext, useState } from "react";
+import logo from "../images/ziggylogo.png";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
@@ -16,33 +16,46 @@ const Header = () => {
   // (store) => store.cart.items - means what portion of the store I want to subscribe inorder to get access to it
 
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
 
   return (
     <div className="header">
       <div>
-        <img alt="" className="company-logo" src={LOGO_URL} />
+        <img alt="company-logo" className="company-logo" src={logo} />
       </div>
 
       <div className="nav-items">
         <ul className="nav-links">
-          <li>Online Status: {onlineStatus ? "🟢" : "🔴"}</li>
-          <li>
-            <Link to="/">Home</Link>
+          <li className="nav-links">
+            Online Status: {onlineStatus ? "🟢" : "🔴"}
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/" className="nav-links">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/about" className="nav-links">
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/grocery">Grocery</Link>
+            <Link to="/contact" className="nav-links">
+              Contact
+            </Link>
           </li>
           <li>
-            <Link to="/cart"> {cartItems.length} 🛒 </Link>
+            <Link to="/grocery" className="nav-links">
+              Grocery
+            </Link>
           </li>
-          <li>
+          <li className="cart-container">
+            <Link to="/cart" className="nav-links">
+              {" "}
+              <button className="cart-count">{cartItems.length}</button>🛒{" "}
+            </Link>
+          </li>
+          <li className="nav-links">
             {" "}
             <button
               className="login-btn"
@@ -55,7 +68,7 @@ const Header = () => {
               {btnNameReact}
             </button>{" "}
           </li>
-          <li>CURRENT USER: {loggedInUser}</li>
+          <li className="nav-links">👤 {loggedInUser}</li>
         </ul>
       </div>
     </div>

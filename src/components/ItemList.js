@@ -27,19 +27,15 @@ const ItemList = ({ items }) => {
             </div>
             <p className="dish-description">{item.card.info.description}</p>
           </div>
-          <div className="dish-container">
+          <div>
+            <button className="add-btn" onClick={() => handleAddItem(item)}>
+              Add +
+            </button>
             <img
               className="dish-pic"
               alt=""
               src={CDN_URL + item.card.info.imageId}
             />
-            <div>
-              {" "}
-              <button className="add-btn" onClick={() => handleAddItem(item)}>
-                {" "}
-                Add +{" "}
-              </button>{" "}
-            </div>
           </div>
         </div>
       ))}

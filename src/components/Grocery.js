@@ -1,6 +1,6 @@
 const Grocery = () => {
   return (
-    <div>
+    <div className="grocery">
       <h4>
         This is similar to swiggy instamart and has lots and lots of child
         components inside it. Using this component to try lazy loading concept
