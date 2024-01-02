@@ -100,7 +100,8 @@
   border-radius: 0.3rem;
 }
 
-.login-btn {
+/* login button */
+.login {
   padding: 0.5rem;
   border-style: none;
   border-radius: 0.5rem;
@@ -109,7 +110,7 @@
   font-family: inherit;
 }
 
-.login-btn:hover {
+.login:hover {
   cursor: pointer;
   background-color: #93c5fd;
 }

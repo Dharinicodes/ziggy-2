@@ -3,6 +3,23 @@ import Contact from "../Contact";
 import "@testing-library/jest-dom";
 
 describe("Contact us page test case", () => {
+  // Examples of helper functions in testing :-
+  // beforeAll(() => {
+  //   console.log("Before All");
+  // });
+
+  // beforeEach(() => {
+  //   console.log("Before Each");
+  // });
+
+  // afterAll(() => {
+  //   console.log("After All");
+  // });
+
+  // afterEach(() => {
+  //   console.log("After Each");
+  // });
+
   it("Should load heading inside contact component", () => {
     // "it" - another name for test. when you read it as a whole sentence it makes sense. Just another naming convention
 
